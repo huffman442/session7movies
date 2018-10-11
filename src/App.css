@@ -10,6 +10,12 @@
   z-index: -1000;
   
 }
+.backdrop{
+  background-size:cover;
+  height: 100vh;
+  width: 100vw;
+  
+}
 .Background {
   background-color: blanchedalmond;
   width: 70vw;
@@ -47,6 +53,12 @@
   color: black;
   z-index: -100;
   
+}
+.movieBackground{
+    background-color: blanchedalmond;
+    height: auto;
+    width: 22vw;
+    box-shadow: 2px 2px 5px gray;
 }
 
 img{

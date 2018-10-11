@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Axios from 'axios';
 import Movies from './Movies.js';
@@ -11,6 +10,7 @@ class App extends Component {
     
     super(props)
     this.gotoMovieDeets=this.gotoMovieDeets.bind(this);
+    this.goBack=this.goBack.bind(this);
     this.state = {
       currentPage: "Movies",
       moviesResults:{
@@ -33,7 +33,9 @@ class App extends Component {
         this.setState({individualMovie: response.data, currentPage: "Movie"});
       })
     }
-  
+  goBack(){
+    this.setState({currentPage: "Movies"});
+  }
   render() {
     var movietag;
    
@@ -43,7 +45,7 @@ class App extends Component {
     }
     else
     {
-      movietag = <Movie individualMovie={this.state.individualMovie}></Movie>
+      movietag = <Movie individualMovie={this.state.individualMovie} goBack={this.goBack}></Movie>
     }
 
     /*movietag = <Movie></Movie>;*/
@@ -60,4 +62,3 @@ class App extends Component {
 }
 
 export default App;
-
