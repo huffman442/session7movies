@@ -55,6 +55,7 @@
     width: 22vw;
     box-shadow: 2px 2px 5px gray;
     opacity: .8;
+    padding-bottom: .5rem;
 }
 
 img{

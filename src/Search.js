@@ -26,7 +26,7 @@ class Search extends Component {
                     <option value="37">Western</option>
                 </select>
                 <input onChange={this.props.handleSearchState} value={this.props.searchString} type="text"/>
-                <button onClick={this.props.handleSearch}>submit</button>
+                <button onClick={this.props.handleSearch}>Submit</button>
             
         </div>        
     );
