@@ -3,3 +3,22 @@
 = Runtime
 = Tagline
 - Maybe Cast
+
+<div className="Background">
+         {this.state.moviedata.results.map( (movie) => {
+          return (
+           <div className="Movies">
+             <h3>{movie.title}</h3>
+             
+                <img onClick={() => this.gotoMovieDeets(movie.id)} src={"https://image.tmdb.org/t/p/w300" + movie.poster_path} />
+                <div className="MoviesInfo">
+                Overview: {movie.overview}<br/>
+                Rating: {movie.vote_average}
+                Movie Id: {movie.id}
+                
+            
+             </div>             
+            </div>
+           )
+        } )}
+        </div>

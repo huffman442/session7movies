@@ -25,20 +25,20 @@ class App extends Component {
       individualMovie: []
     }
     
-    Axios
-      .get("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=b6fbc7f3f313bd395902af464ef47262")
-      .then((response) =>  {
-        this.setState({moviesResults: response.data});
-      });
+  Axios
+    .get("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=b6fbc7f3f313bd395902af464ef47262")
+    .then((response) =>  {
+      this.setState({moviesResults: response.data});
+    });
   }
   gotoMovieDeets(id)
-    {
-      Axios
+  {
+    Axios
       .get("https://api.themoviedb.org/3/movie/"+ id +"?api_key=b6fbc7f3f313bd395902af464ef47262&language=en-US")
       .then((response) => {
         this.setState({individualMovie: response.data, currentPage: "Movie"});
       })
-    }
+  }
   goBack(){
     this.setState({currentPage: "Movies"});
   }
@@ -58,11 +58,9 @@ class App extends Component {
       .then((response) =>  {
         this.setState({moviesResults: response.data});
       });
-
   }
   render() {
-    var movietag;
-   
+    var movietag;   
     if (this.state.currentPage === "Movies")
     {
       movietag = <Movies
@@ -76,18 +74,14 @@ class App extends Component {
     }
     else
     {
-      movietag = <Movie individualMovie={this.state.individualMovie} goBack={this.goBack}></Movie>
+      movietag = <Movie individualMovie={this.state.individualMovie}
+                        goBack={this.goBack}
+                  />
     }
-  
-    /*movietag = <Movie></Movie>;*/
-  
-  
-  
+
     return (
-      <div className="App">
-      
-      {movietag}
-        
+      <div className="App">      
+        {movietag}        
       </div>
     );
   }
