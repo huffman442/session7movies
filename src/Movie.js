@@ -10,16 +10,17 @@ class Movie extends Component {
                 <div className="movieBackground">
                     <div className="Movies">
                         <h2>{movie.title}</h2>
-                        <h3>Budget: ${movie.budget/1000000} Million</h3>
+                        <h3>Budget: ${movie.budget/1000000.00} Million</h3>
                         <h3>Release Date: {movie.release_date}</h3>
                         <p>Overview: {movie.overview}</p>
                         <p>Rating: {movie.vote_average}</p>
                     </div>
-                    <button onClick={this.props.goBack}>Back</button>
+                    <button className="back-button" onClick={this.props.goBack}>Back</button>
                 </div>
             </div>
         </div>
         );
-        }
-        }
-    export default Movie;
+    }
+}
+
+export default Movie;

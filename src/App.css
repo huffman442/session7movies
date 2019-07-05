@@ -57,12 +57,36 @@
     opacity: .8;
     padding-bottom: .5rem;
 }
+.search-button{
+  cursor: pointer;
+  background-color: red;
+  color: black;
+  font-weight: bolder;
+  border:solid;
+  border-color: black;
+  border-radius: 5px;
+  font-family: 'Playfair Display SC', serif;
+}
+
+.back-button{
+  cursor: pointer;
+  background-color: red;
+  width: 25%;
+  height: 3vw;
+  color: black;
+  font-weight: bolder;
+  border:solid;
+  border-color: black;
+  border-radius: 5px;
+  font-family: 'Playfair Display SC', serif;
+}
 
 img{
   box-shadow: 10px 10px 5px #aaaaaa;
 }
 img:hover{
   opacity: .6;
+  cursor: pointer;
 }
 
 .App-header {
