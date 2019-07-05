@@ -13,7 +13,7 @@ class Movies extends Component {
                 return (
                     <div className="Movies">
                         <h3>{movie.title}</h3>
-                        <img onClick={() => this.props.gotoMovieDeets(movie.id)} src={"https://image.tmdb.org/t/p/w300" + movie.poster_path} />
+                        <img onClick={() => this.props.gotoMovieDeets(movie.id)} src={"https://image.tmdb.org/t/p/w300" + movie.poster_path} alt={movie.title + "poster"} />
                     </div>
                 )
                 } )}

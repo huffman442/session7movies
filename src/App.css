@@ -104,7 +104,18 @@ img:hover{
   color: #61dafb;
 }
 
-
+select {
+  border-color: black;
+  border-radius: 5px;
+  border-width: 2px;
+  padding:.175rem;
+}
+input{
+  border-color: black;
+  border-radius: 5px;
+  border-width: 2px;
+  padding: .25rem;
+}
 
 img {
   max-height: 40vh;
